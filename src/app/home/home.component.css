@@ -1,0 +1,55 @@
+header {
+    background-color: rgb(216, 230, 231);
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    color: Black;
+  }
+  #texta,#textb,input[type=password] {
+    width: 24%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  #text1,#text2,#text3,#text4
+  {
+    width: 48%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  #button1,#button2 {
+    background-color:lightcoral;
+    color: white;
+    padding: 14px 30px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 11%;
+  }
+  #button3,#button4
+  {
+      background-color:rgb(216,230,231);
+      color:Black;
+      width:20%;
+  }
+  #button5,#button6
+  {
+    background-color:rgb(216,230,231);
+    color:Black;
+    width:20%;
+  }
+  #googleBtn
+  {
+    background-color:rgb(216,230,231);
+    color:Black;
+    width:24%;
+  }
+  button:hover {
+    opacity: 0.8;
+  }
+  
