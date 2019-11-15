@@ -25,11 +25,11 @@ header {
   #button1,#button2 {
     background-color:lightcoral;
     color: white;
-    padding: 14px 30px;
-    margin: 8px 0;
+    padding: 10px 140px;
+    margin: 10px 0;
     border: none;
     cursor: pointer;
-    width: 11%;
+    width: 10%;
   }
   #button3,#button4
   {

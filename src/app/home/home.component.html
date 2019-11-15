@@ -1,66 +1,70 @@
 <header>
-  <h2>Welcome to {{ title }}!</h2>
+  <h2>Welcome</h2>
 </header>
-<div class="container">
-  <div class="Block">
-    <h2>Login</h2>
-    <p> <label for="uname"><b>Username</b></label></p>
-    <input type="text" id="texta" name="uname">
-    <p><label for="psw"><b>Password</b></label></p>
-    <input type="password" id="textb" name="psw">
-    <p><button type="submit" id="button1">Login</button>&nbsp;
-      &nbsp;
-      <button type="button" data-toggle="modal" data-target="#myModal" id="button2">Signup</button></p>
-
-    <meta name="google-signin-client_id"
-      content="837249048451-j3aaqrrm5aprd5rr456k2dcmknv4evb0.apps.googleusercontent.com">
-    <br />
-    <button class="g-signin2" data-width="248" data-height="60" id="googleBtn">Google</button>
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <label>Sign up</label>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-
-            <div>
-              <label
-                for="Name"><b>Name</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="text" placeholder="Enter Name" name="Name" id="text1" #name required>
-              <br />
-              <br />
-              <label
-                for="email"><b>Email</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="text" placeholder="Enter Email" name="email" id="text2" #email required>
-              <br />
-              <br />
-              <label
-                for="psw"><b>Password</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="password" placeholder="Enter Password" name="psw" id="text3" #password required>
-              <br />
-              <br />
-              <label for="psw-repeat"><b>Repeat
-                  Password</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="text4" #repassword required>
-              <br />
-              <br />
-              <div class="clearfix">
-                <button type="button" class="cancelbtn" id="button5" (click)="reset">Reset</button>&nbsp;
-                <button type="submit" class="signupbtn" id="button6"
-                  (click)="subm(name.value,email.value,password.value,repassword.value)">Sign Up</button>
-              </div>
-            </div>
-          </div>
-
-
-
-
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" id="button4">Close</button>
+<h4>&nbsp;&nbsp;&nbsp;&nbsp;Login</h4>
+<br />
+<form #userlogin="ngForm" (ngSubmit)="Submitlogin(userlogin.value)">
+  &nbsp;&nbsp;&nbsp;&nbsp;Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : &nbsp;&nbsp;&nbsp;&nbsp;<input type="texta" name="name"
+    placeholder="name" ngModel>
+  <br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp;Password :&nbsp;&nbsp;&nbsp;&nbsp;<input type="password2" name="password"
+    placeholder="password" ngModel>
+  <br />
+  <br />
+  &nbsp;&nbsp;&nbsp;&nbsp; <input type="submit" value="Login">
+</form>
+&nbsp;
+<br />
+&nbsp;&nbsp;&nbsp;&nbsp;
+<button type="button" data-toggle="modal" data-target="#myModal">Signup</button><br>
+<meta name="google-signin-client_id" content="837249048451-j3aaqrrm5aprd5rr456k2dcmknv4evb0.apps.googleusercontent.com">
+<br />
+<button class="g-signin2" data-width="248" data-height="60" id="googleBtn">Google</button>
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <label>Sign up</label>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <label
+            for="Name"><b>Name</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" placeholder="Enter Name" name="Name" id="text1" #name required>
+          <br />
+          <br />
+          <label
+            for="Email"><b>Email</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" placeholder="Enter Email" name="email" id="text2" #email required>
+          <br />
+          <br />
+          <label for="Phone Number"><b>Phone
+              Number</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" placeholder="Enter phone number" name="phonenumber" id="text21" #phonenumber required>
+          <br />
+          <br />
+          <label
+            for="psw"><b>Password</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="password" placeholder="Enter Password" name="psw" id="text3" #password required>
+          <br />
+          <br />
+          <label for="psw-repeat"><b>Repeat
+              Password</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" id="text4" #repassword required>
+          <br />
+          <br />
+          <div class="clearfix">
+            <button type="button" class="cancelbtn" id="button5" (click)="reset">Reset</button>&nbsp;
+            <button type="submit" class="signupbtn" id="button6"
+              (click)="subm(name.value,email.value,phonenumber.value,password.value,repassword.value)">Sign
+              Up</button>
           </div>
         </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="button4">Close</button>
       </div>
     </div>
   </div>
