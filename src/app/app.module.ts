@@ -8,12 +8,16 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
+import { Home4Component } from './home4/home4.component';
+import { Home8Component } from './home8/home8.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    routingComponents
+    routingComponents,
+    Home4Component,
+    Home8Component
   ],
   imports: [
     BrowserModule,
