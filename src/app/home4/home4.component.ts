@@ -19,5 +19,9 @@ export class Home4Component implements OnInit {
   {
     this.router.navigate(['home8'])
   }
+  donatetoorphan()
+  {
+    this.router.navigate(['fundings'])
+  }
 
 }

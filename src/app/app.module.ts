@@ -10,6 +10,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { Home4Component } from './home4/home4.component';
 import { Home8Component } from './home8/home8.component';
+import { FundingsComponent } from './fundings/fundings.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { Home8Component } from './home8/home8.component';
     AppComponent,
     routingComponents,
     Home4Component,
-    Home8Component
+    Home8Component,
+    FundingsComponent
   ],
   imports: [
     BrowserModule,

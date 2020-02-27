@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-home8',
   templateUrl: './home8.component.html',
@@ -7,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class Home8Component implements OnInit {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient,private router: Router) { }
   myData;
   ngOnInit() {
   }
@@ -20,6 +21,10 @@ export class Home8Component implements OnInit {
         this.myData = JSON.parse(localStorage.getItem("jvn"));
       }
     );
+  }
+  donateorphan()
+  {
+    this.router.navigate(['fundings'])
   }
 
 }

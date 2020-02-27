@@ -29,12 +29,14 @@ export class HomeComponent implements OnInit {
         if(dat==true)
         {
           console.log("true");
+          alert("Login successful");
           this.router.navigate(['home2']);
         }
       }
       else
       {
         console.log("false");
+        alert("Please Check the Details");
       }
     });
 
@@ -134,6 +136,7 @@ export class HomeComponent implements OnInit {
     this.http.post("http://localhost:3000/signup", data).subscribe(
       res => {
         console.log(res);
+        alert("Account Has Created");
       }
     );
   }

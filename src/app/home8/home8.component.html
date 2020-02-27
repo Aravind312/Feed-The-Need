@@ -5,7 +5,7 @@
 &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
 <input type="text" name="sear" />&nbsp;&nbsp;<input
   type="button"
-  value="  Searchsssssssss  "
+  value="  Search  "
   (click)="submit()"
 />
 <div *ngIf="myData?.length > 0">
@@ -15,7 +15,8 @@
     <br > 
      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Orphanage : <input type="text" value={{item.organame}} disabled>
 
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number &nbsp; : <input type="text" value={{item.phone_number}} disabled></p>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone Number &nbsp; : <input type="text" value={{item.phone_number}} disabled>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="button" value="Donate to Orphanage" (click)="donateorphan()" padding="12px"></p>
      
       &nbsp;&nbsp;&nbsp;&nbsp; Address  &nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" value={{item.address}} disabled>
     
@@ -24,8 +25,9 @@
       <p ></p>
      <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;State  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <input type="text" value={{item.state}} disabled>
      
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pincode &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;: <input type="text" value={{item.pincode}} disabled></p><br >
-   
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pincode &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;: <input type="text" value={{item.pincode}} disabled>
+      </p>
+      <br >
   </table>
 </div>
 </div>
